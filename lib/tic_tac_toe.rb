@@ -24,14 +24,11 @@ class TicTacToe
   end
   
   def position_taken?(arg)
-    if @board[arg] == " "
-       false
-    else
-       true
-    end
+    @board[arg] != " "
   end
   
   def turn
+    puts "Enter 1-9!"
     move = gets.chomp
     index = input_to_index(move)
     #binding.pry
